@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    defaultConfig {
+        applicationId "com.example.caixingcun.playandroid"
+        minSdkVersion MINI_SDK_VERSION as int
+        targetSdkVersion COMPILE_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    /**
+     * support
+     */
+    compile SupportV7
+    compile SupportV4
+    compile SupportDesign
+    /**Rx*/
+    compile RxJava2
+    compile RxAndroid2
+    /** Retrofit */
+    compile Retrofit2
+    compile Retrofit2RxJava2Adapter
+    compile RetrofitConverterGson
+    /**
+     * rxPermission
+     */
+    compile RxPermission2
+    /**
+     * 日志拦截
+     */
+    compile LogInterceptor
+    /** rxbinding*/
+    compile RxBinding2
+    compile RxBinding2SupportV4
+    compile RxBinding2SupportV7
+    compile RxBinding2Design
+    compile RxBinding2RecyclerView
+    /**
+     * butterknife
+     */
+    implementation  ButterKnife7
+    /**
+     * 数据库操作module
+     */
+    implementation project(':daomodule')
+    /**
+     * 图片加载 glide
+     */
+    compile Glide
+    /**
+     * 图片选择裁剪库
+     */
+    compile project(path: ':imagepicker')
+    /**
+     * RecyclerView 适配器帮助类
+     */
+    compile BaseRecyclerViewAdapterHelper
+    /**
+     * 上拉记载更多 下拉刷新 smartRefreshLayout
+     */
+    compile SmartRefreshLayout
+    compile SmartRefreshLayoutHeader
+
+    /**
+     * 播放器框架 基于 b站ijkplayer
+     */
+    implementation project(':playerview')
+    /**
+     * 广告条
+     */
+    compile 'com.youth.banner:banner:1.4.10'
+    /**
+     * webview框架
+     */
+    compile 'com.just.agentweb:agentweb:4.0.2'
+    /**
+     * Stream
+     */
+    compile 'com.annimon:stream:1.0.3'
+    /**
+     * smartRefreshLayout
+     */
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+    /**
+     * Item Decoration
+     */
+    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+}

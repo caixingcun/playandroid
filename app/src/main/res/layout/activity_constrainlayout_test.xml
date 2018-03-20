@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<TextView-->
+        <!--android:id="@+id/tv1"-->
+        <!--android:layout_width="140dp"-->
+        <!--android:layout_height="86dp"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:background="#fd3"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--/>-->
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_height="100dp"
+        android:layout_width="0dp"
+        android:layout_margin="5dp"
+        android:background="#000"
+        app:layout_constraintDimensionRatio="W,16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_v"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="30dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/guideline_h"
+        app:layout_constraintLeft_toRightOf="@id/guideline_v"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="12dp"
+        android:text="马云:一年交税170多亿马云:一年交税170多亿马云:一年交税170多亿马云:一年交税170多亿马云:一年交税170多亿马云:一年交税170多亿交税170多亿马云:一年交税170多亿马云:一年交税170多亿马云:一年交税170多亿马云:一年交税170多亿马云:一年交税170多亿"
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:lines="3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv1"
+        app:layout_constraintTop_toTopOf="@id/iv1"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="8分钟前"
+        app:layout_constraintLeft_toRightOf="@id/iv1"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv1"
+        android:textColor="#333"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+    <!--<ImageView-->
+        <!--android:background="#000"-->
+        <!--android:layout_margin="10dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tv1"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintDimensionRatio="H,16:6"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp" />-->
+    <TextView
+        android:text="tab1"
+        android:id="@+id/tab1"
+        android:background="#f67"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tab2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="30dp" />
+    <TextView
+        android:text="tab2"
+        android:id="@+id/tab2"
+        android:background="#f12"
+        app:layout_constraintHorizontal_weight="1"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/tab1"
+        app:layout_constraintRight_toLeftOf="@id/tab3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:text="tab3"
+        android:id="@+id/tab3"
+        android:gravity="center"
+        android:background="#fab"
+        app:layout_constraintLeft_toRightOf="@id/tab2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:text="tab4"
+        android:id="@+id/tab4"
+        android:background="#f67"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tab5"
+        app:layout_constraintBottom_toTopOf="@id/tab1"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="30dp" />
+    <TextView
+        android:text="tab5"
+        android:id="@+id/tab5"
+        android:background="#f12"
+        app:layout_constraintHorizontal_weight="1"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/tab4"
+        app:layout_constraintRight_toLeftOf="@id/tab6"
+        app:layout_constraintBottom_toTopOf="@id/tab1"
+        android:layout_width="100dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:text="tab6"
+        android:id="@+id/tab6"
+        android:gravity="center"
+        android:background="#fab"
+        app:layout_constraintLeft_toRightOf="@id/tab5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/tab1"
+        android:layout_width="100dp"
+        android:layout_height="30dp" />
+
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#612"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

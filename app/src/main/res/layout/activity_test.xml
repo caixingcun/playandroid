@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.caixingcun.playandroid.module.test.TestActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络请求/数据库获取数据" />
+
+    <Button
+        android:id="@+id/btn_a_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络请求/Acache文件获取数据" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="权限请求" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击播放视屏" />
+
+</LinearLayout>

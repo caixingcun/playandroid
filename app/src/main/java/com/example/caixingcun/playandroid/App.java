@@ -16,6 +16,7 @@ import com.lzy.imagepicker.view.CropImageView;
 
 public class App extends Application {
 
+
     private static App app;
     public static Context getAppContext() {
         return app;
